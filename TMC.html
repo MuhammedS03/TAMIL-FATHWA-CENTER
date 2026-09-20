@@ -1,0 +1,2968 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>தமிழ் ஃபத்வா மையம் | Tamil Fatwa Center</title>
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:
+        "Noto Sans Tamil",
+        "Latha",
+        Arial,
+        sans-serif;
+
+    background: #f4f7f3;
+    color: #17231d;
+    line-height: 1.7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+:root {
+    --dark-green: #063b21;
+    --green: #0b6b3a;
+    --light-green: #e9f6ee;
+
+    --gold: #d7aa28;
+    --gold-light: #f5dc7b;
+
+    --white: #ffffff;
+    --cream: #fffaf0;
+
+    --text: #17231d;
+    --muted: #66736b;
+
+    --danger: #b42318;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,0.10);
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    background: #042b18;
+    color: white;
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(6,59,33,0.97);
+
+    box-shadow:
+        0 3px 15px rgba(0,0,0,0.2);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    text-decoration: none;
+
+    flex: 1;
+}
+
+.brand img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+}
+
+.brand h1 {
+    font-size: 20px;
+}
+
+.brand small {
+    color: var(--gold-light);
+    font-size: 12px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.navlinks a,
+.navlinks button {
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.navlinks a:hover,
+.navlinks button:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.menu {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(215,170,40,0.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #052d19,
+            #0b6336,
+            #063b21
+        );
+
+    color: white;
+
+    padding: 70px 20px;
+}
+
+.hero-inner {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        0.8fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--gold-light);
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: clamp(34px,5vw,58px);
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    color: #e2eee7;
+
+    max-width: 700px;
+}
+
+.hero-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-logo img {
+    width: min(370px,80vw);
+
+    filter:
+        drop-shadow(
+            0 15px 25px rgba(0,0,0,0.4)
+        );
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 12px 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.primary {
+    background: var(--gold);
+
+    color: #1c220e;
+}
+
+.secondary {
+    background: white;
+
+    color: var(--green);
+}
+
+.outline {
+    background: transparent;
+
+    border: 1px solid currentColor;
+
+    color: inherit;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-head {
+    margin-bottom: 20px;
+}
+
+.section-head h2 {
+    color: var(--dark-green);
+
+    font-size: 30px;
+}
+
+.section-head p {
+    color: var(--muted);
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    display: flex;
+
+    margin-bottom: 20px;
+}
+
+.search input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #d5ded8;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: white;
+
+    font-size: 16px;
+}
+
+.search input:focus {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(11,107,58,0.1);
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 30px;
+}
+
+.category {
+    white-space: nowrap;
+
+    border: 1px solid #d5ded8;
+
+    background: white;
+
+    color: var(--green);
+
+    border-radius: 30px;
+
+    padding: 9px 15px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.category.active,
+.category:hover {
+    background: var(--green);
+
+    color: white;
+}
+
+
+/* =========================
+   FATWA GRID
+========================= */
+
+.fatwa-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   FATWA CARD
+========================= */
+
+.fatwa-card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5ebe7;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.fatwa-content {
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.tag {
+    background: var(--light-green);
+
+    color: var(--green);
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    align-self: flex-start;
+}
+
+.fatwa-card h3 {
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    margin: 12px 0 8px;
+
+    color: #10251a;
+}
+
+.fatwa-card p {
+    color: #5e6b63;
+
+    line-height: 1.8;
+}
+
+.meta {
+    color: #89948d;
+
+    font-size: 12px;
+
+    margin-top: auto;
+
+    padding-top: 15px;
+}
+
+.actions {
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+
+    margin-top: 15px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #edf0ee;
+}
+
+.like-button,
+.read-button {
+    border: 1px solid #d8e0da;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 9px 12px;
+
+    cursor: pointer;
+}
+
+.like-button.liked {
+    color: #b42318;
+
+    background: #fff3f2;
+}
+
+.read-button {
+    margin-left: auto;
+
+    color: var(--green);
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    margin-top: 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            white,
+            #edf7ef
+        );
+
+    border: 1px solid #dce9df;
+
+    border-radius: 25px;
+
+    padding: 30px;
+}
+
+.about h2 {
+    color: var(--dark-green);
+
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: var(--muted);
+
+    line-height: 1.9;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #042b18;
+
+    color: #dce8e0;
+
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 45px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr;
+
+    gap: 30px;
+}
+
+footer h3 {
+    color: var(--gold-light);
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    line-height: 1.8;
+}
+
+footer a {
+    display: block;
+
+    color: #dce8e0;
+
+    padding: 5px 0;
+
+    text-decoration: none;
+}
+
+.social {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.social a {
+    border: 1px solid rgba(255,255,255,0.2);
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    padding: 15px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background: rgba(0,0,0,0.65);
+
+    padding: 20px;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+
+    width: min(650px,100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    position: relative;
+}
+
+.modal-box h2 {
+    color: var(--dark-green);
+
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    border: none;
+
+    background: #f0f2f0;
+
+    border-radius: 50%;
+
+    width: 35px;
+
+    height: 35px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FORMS
+========================= */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d4ddd7;
+
+    border-radius: 10px;
+
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+.error {
+    color: var(--danger);
+
+    margin-top: 10px;
+}
+
+.success {
+    color: var(--green);
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   ADMIN BAR
+========================= */
+
+.admin-bar {
+    display: none;
+
+    background: #fff5d6;
+
+    border-bottom: 1px solid #ead58b;
+
+    padding: 10px 20px;
+}
+
+.admin-bar.show {
+    display: block;
+}
+
+.admin-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+.admin-container span {
+    flex: 1;
+
+    font-weight: bold;
+
+    color: #5d4700;
+}
+
+
+/* =========================
+   FATWA DETAIL
+========================= */
+
+.detail-answer {
+    white-space: pre-line;
+
+    line-height: 2;
+
+    font-size: 17px;
+}
+
+.source-box {
+    background: #f6faf7;
+
+    border-left: 4px solid var(--gold);
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px) {
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-logo {
+        order: -1;
+    }
+
+    .fatwa-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .footer-container {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media(max-width:680px) {
+
+    .navlinks {
+        display: none;
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+
+        top: 78px;
+
+        background: var(--dark-green);
+
+        padding: 10px 20px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .navlinks.open {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .fatwa-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .brand h1 {
+        font-size: 16px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==================================
+     TOP BAR
+================================== -->
+
+<div class="topbar">
+
+🕌 தமிழ் ஃபத்வா மையம் —
+சமகால மார்க்கக் கேள்விகளுக்கான நம்பகமான தகவல்கள்
+
+</div>
+
+
+<!-- ==================================
+     HEADER
+================================== -->
+
+<header>
+
+<div class="nav">
+
+<a href="#home" class="brand">
+
+<!--
+IMPORTANT:
+Put your logo file in the same folder:
+logo.png
+-->
+
+<img src="logo.png"
+     id="adminLogo"
+     alt="Tamil Fatwa Center Logo">
+
+<div>
+
+<h1>தமிழ் ஃபத்வா மையம்</h1>
+
+<small>
+TAMIL FATWA CENTER
+</small>
+
+</div>
+
+</a>
+
+
+<nav class="navlinks" id="navLinks">
+
+<a href="#home">
+முகப்பு
+</a>
+
+<a href="#fatwas">
+ஃபத்வாக்கள்
+</a>
+
+<a href="#about">
+எங்களைப் பற்றி
+</a>
+
+<button onclick="openLogin()">
+👤 உள்நுழைவு
+</button>
+
+<button id="logoutButton"
+        style="display:none"
+        onclick="logout()">
+
+வெளியேறு
+
+</button>
+
+</nav>
+
+
+<button class="menu"
+        onclick="toggleMenu()">
+
+☰
+
+</button>
+
+</div>
+
+</header>
+
+
+<!-- ==================================
+     ADMIN BAR
+================================== -->
+
+<div class="admin-bar"
+     id="adminBar">
+
+<div class="admin-container">
+
+<span>
+🔐 Admin Mode
+</span>
+
+<button class="btn primary"
+        onclick="openAddFatwa()">
+
+＋ புதிய ஃபத்வா
+
+</button>
+
+<button class="btn outline"
+        onclick="adminLogout()">
+
+Admin Logout
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ==================================
+     HERO
+================================== -->
+
+<section class="hero"
+         id="home">
+
+<div class="hero-inner">
+
+
+<div>
+
+<div class="eyebrow">
+
+📚 அறிவு • புரிந்து கொள்ள • பின்பற்ற
+
+</div>
+
+
+<h2>
+
+சமகால மார்க்கக் கேள்விகளுக்கான
+நம்பகமான ஃபத்வாக்கள்
+
+</h2>
+
+
+<p>
+
+மார்க்கக் கேள்விகளுக்கான பதில்களை
+எளிய தமிழில் அறிந்து கொள்ளுங்கள்.
+மூல ஃபத்வாக்கள், அரபு ஆதாரங்கள்
+மற்றும் தொடர்புடைய இணைப்புகளுடன்.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#fatwas"
+   class="btn primary">
+
+📖 ஃபத்வாக்களைப் பார்க்க
+
+</a>
+
+
+<button class="btn secondary"
+        onclick="openLogin()">
+
+👤 உறுப்பினர் உள்நுழைவு
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="hero-logo">
+
+<img src="logo.png"
+     alt="Tamil Fatwa Center">
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ==================================
+     MAIN CONTENT
+================================== -->
+
+<main>
+
+
+<section id="fatwas">
+
+
+<div class="section-head">
+
+<h2>
+📚 சமீபத்திய ஃபத்வாக்கள்
+</h2>
+
+<p>
+கேள்வி அல்லது தலைப்பைத் தேடுங்கள்.
+</p>
+
+</div>
+
+
+<!-- SEARCH -->
+
+<div class="search">
+
+<input
+type="search"
+id="searchInput"
+placeholder="🔍 ஃபத்வா, கேள்வி அல்லது தலைப்பைத் தேடுங்கள்..."
+oninput="displayFatwas()">
+
+</div>
+
+
+<!-- CATEGORIES -->
+
+<div class="categories"
+     id="categories">
+
+</div>
+
+
+<!-- FATWA CARDS -->
+
+<div class="fatwa-grid"
+     id="fatwaGrid">
+
+</div>
+
+
+</section>
+
+
+<!-- ==================================
+     ABOUT
+================================== -->
+
+<section class="about"
+         id="about">
+
+<h2>
+🕌 தமிழ் ஃபத்வா மையம் பற்றி
+</h2>
+
+
+<p>
+
+தமிழ் ஃபத்வா மையத்தின் நோக்கம்
+சமகால மார்க்கக் கேள்விகளுக்கான
+பயனுள்ள தகவல்களை எளிய தமிழில்
+வழங்குவதாகும்.
+
+</p>
+
+
+<p>
+
+ஒவ்வொரு ஃபத்வாவிற்கும் கிடைக்கக்கூடிய
+மூல ஆதாரங்கள் மற்றும் அரபு
+குறிப்புகளுக்கான இணைப்புகளை
+சேர்க்கலாம்.
+
+</p>
+
+
+<p>
+
+<strong>
+குறிப்பு:
+</strong>
+
+வெளியிடப்படும் ஃபத்வாக்களை
+தகுதியான அறிஞர்கள் / நிர்வாகிகள்
+சரிபார்த்து வெளியிடுவது நல்லது.
+
+</p>
+
+</section>
+
+
+</main>
+
+
+<!-- ==================================
+     FOOTER
+================================== -->
+
+<footer>
+
+<div class="footer-container">
+
+
+<div>
+
+<h3>
+தமிழ் ஃபத்வா மையம்
+</h3>
+
+
+<p>
+
+நம்பகமான மார்க்கத் தகவல்களை
+எளிய தமிழில்.
+
+பயனுள்ள தகவல்கள் பிறருக்கும்
+சென்றடைய உங்கள் உறவினர்கள்
+மற்றும் நண்பர்களுடன் பகிருங்கள்.
+
+</p>
+
+
+<div class="social">
+
+<a href="https://chat.whatsapp.com/DOWJ0SUfTltEvm0ZFSa0Df?s=sh&p=a&ilr=0"
+   target="_blank">
+
+WhatsApp Group
+
+</a>
+
+
+<a href="https://whatsapp.com/channel/0029VbDWbRBKWEKvc79gdV3V"
+   target="_blank">
+
+WhatsApp Channel
+
+</a>
+
+
+<a href="https://www.facebook.com/profile.php?id=61593890653009&mibextid=ZbWKwL"
+   target="_blank">
+
+Facebook
+
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>
+வழிசெலுத்தல்
+</h3>
+
+<a href="#home">
+முகப்பு
+</a>
+
+<a href="#fatwas">
+ஃபத்வாக்கள்
+</a>
+
+<a href="#about">
+எங்களைப் பற்றி
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+உதவி
+</h3>
+
+<p>
+
+கேள்வி அல்லது பரிந்துரை இருந்தால்
+நிர்வாகக் குழுவைத் தொடர்பு கொள்ளுங்கள்.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+Tamil Fatwa Center.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- ==================================
+     USER LOGIN MODAL
+================================== -->
+
+<div class="modal"
+     id="loginModal">
+
+<div class="modal-box">
+
+<button class="close"
+        onclick="closeModal('loginModal')">
+
+×
+
+</button>
+
+
+<h2>
+👤 உறுப்பினர் உள்நுழைவு
+</h2>
+
+
+<div class="form-group">
+
+<label>
+பெயர்
+</label>
+
+<input
+id="userName"
+placeholder="உங்கள் பெயர்">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Email
+</label>
+
+<input
+id="userEmail"
+type="email"
+placeholder="you@example.com">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Password
+</label>
+
+<input
+id="userPassword"
+type="password"
+placeholder="Password">
+
+</div>
+
+
+<button class="btn primary"
+        style="width:100%"
+        onclick="userLogin()">
+
+உள்நுழை / பதிவு
+
+</button>
+
+
+<div id="loginMessage"></div>
+
+</div>
+
+</div>
+
+
+<!-- ==================================
+     ADMIN LOGIN
+================================== -->
+
+<div class="modal"
+     id="adminLoginModal">
+
+<div class="modal-box">
+
+<button class="close"
+        onclick="closeModal('adminLoginModal')">
+
+×
+
+</button>
+
+
+<h2>
+🔐 Admin Login
+</h2>
+
+
+<p>
+
+Logo-வை 5 முறை விரைவாக
+touch/click செய்தால் Admin Login திறக்கும்.
+
+</p>
+
+
+<br>
+
+
+<div class="form-group">
+
+<label>
+Admin Email
+</label>
+
+<input
+id="adminEmail"
+type="email">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Admin Password
+</label>
+
+<input
+id="adminPassword"
+type="password">
+
+</div>
+
+
+<button class="btn primary"
+        style="width:100%"
+        onclick="adminLogin()">
+
+Admin Login
+
+</button>
+
+
+<div id="adminMessage"></div>
+
+
+<p style="font-size:12px;margin-top:15px">
+
+Demo:
+
+<br>
+
+admin@tamilfatwa.local
+
+<br>
+
+Admin@123
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ==================================
+     ADD FATWA MODAL
+================================== -->
+
+<div class="modal"
+     id="fatwaModal">
+
+<div class="modal-box">
+
+<button class="close"
+        onclick="closeModal('fatwaModal')">
+
+×
+
+</button>
+
+
+<h2>
+➕ புதிய ஃபத்வா
+</h2>
+
+
+<input type="hidden"
+       id="editId">
+
+
+<div class="form-group">
+
+<label>
+கேள்வி / தலைப்பு
+</label>
+
+<input
+id="fatwaQuestion"
+placeholder="கேள்வியை எழுதுங்கள்">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+பதில் — தமிழ்
+</label>
+
+<textarea
+id="fatwaAnswer"
+placeholder="ஃபத்வா பதிலை எழுதுங்கள்"></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+வகை
+</label>
+
+<select id="fatwaCategory">
+
+<option>
+தொழுகை
+</option>
+
+<option>
+நோன்பு
+</option>
+
+<option>
+ஜகாத்
+</option>
+
+<option>
+குடும்பம்
+</option>
+
+<option>
+வணிகம்
+</option>
+
+<option>
+அகீதா
+</option>
+
+<option>
+ஹஜ் & உம்ரா
+</option>
+
+<option>
+சமகால பிரச்சினைகள்
+</option>
+
+<option>
+மற்றவை
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+அரபு மூல ஆதாரம்
+</label>
+
+<textarea
+id="fatwaArabic"
+placeholder="Arabic source"></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+மூல இணைப்பு
+</label>
+
+<input
+id="fatwaSource"
+type="url"
+placeholder="https://example.com">
+
+</div>
+
+
+<button class="btn primary"
+        onclick="saveFatwa()">
+
+💾 ஃபத்வாவை சேமிக்கவும்
+
+</button>
+
+
+<div id="fatwaMessage"></div>
+
+</div>
+
+</div>
+
+
+<!-- ==================================
+     FATWA DETAIL MODAL
+================================== -->
+
+<div class="modal"
+     id="detailModal">
+
+<div class="modal-box">
+
+<button class="close"
+        onclick="closeModal('detailModal')">
+
+×
+
+</button>
+
+
+<div id="detailContent"></div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================
+   DATABASE
+========================================= */
+
+const defaultFatwas = [
+
+{
+    id: "1",
+
+    category: "தொழுகை",
+
+    question:
+    "தொழுகையை நேரத்திற்கு தொழுவது ஏன் முக்கியம்?",
+
+    answer:
+    "தொழுகை நிர்ணயிக்கப்பட்ட நேரங்களில் நிறைவேற்ற வேண்டிய முக்கியமான இபாதத் ஆகும். தொழுகையின் நேரங்களை அறிந்து, இயன்றவரை அதன் ஆரம்ப நேரத்திலேயே தொழுவது சிறந்த நடைமுறையாகும்.",
+
+    arabic:
+    "الصلاة كانت على المؤمنين كتابا موقوتا",
+
+    source:
+    "திருக்குர்ஆன் 4:103",
+
+    sourceLink:
+    "https://quran.com/4/103",
+
+    date:
+    "2026-09-01",
+
+    likes: 0
+},
+
+
+{
+    id: "2",
+
+    category: "நோன்பு",
+
+    question:
+    "ரமலான் நோன்பின் நோக்கம் என்ன?",
+
+    answer:
+    "நோன்பு மனிதனுக்கு தக்வாவை வளர்க்கும் பயிற்சியாகும். உணவு மற்றும் பானத்தைத் தவிர்ப்பதுடன் நாவு, பார்வை மற்றும் செயல்களையும் நன்மையின் பக்கம் கட்டுப்படுத்துவது முக்கியம்.",
+
+    arabic:
+    "لَعَلَّكُمْ تَتَّقُونَ",
+
+    source:
+    "திருக்குர்ஆன் 2:183",
+
+    sourceLink:
+    "https://quran.com/2/183",
+
+    date:
+    "2026-08-25",
+
+    likes: 0
+},
+
+
+{
+    id: "3",
+
+    category: "குடும்பம்",
+
+    question:
+    "பெற்றோரிடம் நல்ல முறையில் நடந்து கொள்வது பற்றி?",
+
+    answer:
+    "பெற்றோரிடம் நன்மையுடன் நடந்து கொள்வது இஸ்லாமிய போதனைகளில் வலியுறுத்தப்பட்டுள்ளது. அவர்களிடம் மரியாதையான வார்த்தைகளைப் பேசுவதும் அவர்களுக்கு உதவுவதும் முக்கியமான நற்குணங்களாகும்.",
+
+    arabic:
+    "وَبِالْوَالِدَيْنِ إِحْسَانًا",
+
+    source:
+    "திருக்குர்ஆன் 17:23",
+
+    sourceLink:
+    "https://quran.com/17/23",
+
+    date:
+    "2026-08-18",
+
+    likes: 0
+}
+
+];
+
+
+/* =========================================
+   LOAD DATABASE
+========================================= */
+
+let fatwas =
+JSON.parse(
+    localStorage.getItem("tamilFatwas")
+)
+|| defaultFatwas;
+
+
+let selectedCategory = "அனைத்தும்";
+
+
+let currentUser =
+JSON.parse(
+    localStorage.getItem("tamilUser")
+)
+|| null;
+
+
+let isAdmin =
+sessionStorage.getItem("tamilAdmin")
+=== "true";
+
+
+let tapCount = 0;
+
+let tapTimer;
+
+
+/* =========================================
+   SAVE DATA
+========================================= */
+
+function saveDatabase() {
+
+    localStorage.setItem(
+        "tamilFatwas",
+        JSON.stringify(fatwas)
+    );
+
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+function toggleMenu() {
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("open");
+
+}
+
+
+/* =========================================
+   MODALS
+========================================= */
+
+function openModal(id) {
+
+    document
+    .getElementById(id)
+    .classList
+    .add("show");
+
+}
+
+
+function closeModal(id) {
+
+    document
+    .getElementById(id)
+    .classList
+    .remove("show");
+
+}
+
+
+/* =========================================
+   USER LOGIN
+========================================= */
+
+function openLogin() {
+
+    if (currentUser) {
+
+        alert(
+            "நீங்கள் ஏற்கனவே உள்நுழைந்துள்ளீர்கள்: "
+            + currentUser.name
+        );
+
+        return;
+    }
+
+    openModal("loginModal");
+
+}
+
+
+function userLogin() {
+
+    const name =
+    document
+    .getElementById("userName")
+    .value
+    .trim();
+
+
+    const email =
+    document
+    .getElementById("userEmail")
+    .value
+    .trim();
+
+
+    const password =
+    document
+    .getElementById("userPassword")
+    .value;
+
+
+    const message =
+    document
+    .getElementById("loginMessage");
+
+
+    if (
+        !name ||
+        !email ||
+        password.length < 6
+    ) {
+
+        message.innerHTML =
+        `
+        <div class="error">
+        பெயர், Email மற்றும் குறைந்தது
+        6 எழுத்து password தேவை.
+        </div>
+        `;
+
+        return;
+    }
+
+
+    currentUser = {
+
+        name: name,
+
+        email: email
+
+    };
+
+
+    localStorage.setItem(
+        "tamilUser",
+        JSON.stringify(currentUser)
+    );
+
+
+    message.innerHTML =
+    `
+    <div class="success">
+    வெற்றிகரமாக உள்நுழைந்துள்ளீர்கள்.
+    </div>
+    `;
+
+
+    updateUserUI();
+
+
+    setTimeout(
+        () => closeModal("loginModal"),
+        500
+    );
+
+}
+
+
+function logout() {
+
+    currentUser = null;
+
+    localStorage.removeItem(
+        "tamilUser"
+    );
+
+    updateUserUI();
+
+}
+
+
+function updateUserUI() {
+
+    const loginButton =
+    document.querySelector(
+        ".navlinks button"
+    );
+
+
+    const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+    if (currentUser) {
+
+        loginButton.style.display =
+        "none";
+
+        logoutButton.style.display =
+        "block";
+
+    }
+
+    else {
+
+        loginButton.style.display =
+        "block";
+
+        logoutButton.style.display =
+        "none";
+
+    }
+
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+function displayCategories() {
+
+    const categories =
+    [
+        "அனைத்தும்",
+        ...new Set(
+            fatwas.map(
+                fatwa => fatwa.category
+            )
+        )
+    ];
+
+
+    document.getElementById(
+        "categories"
+    ).innerHTML =
+
+    categories.map(
+
+        category =>
+
+        `
+        <button
+        class="category
+        ${selectedCategory === category
+            ? "active"
+            : ""}"
+
+        onclick=
+        "selectCategory('${category}')">
+
+        ${category}
+
+        </button>
+        `
+
+    ).join("");
+
+}
+
+
+function selectCategory(category) {
+
+    selectedCategory =
+    category;
+
+    displayCategories();
+
+    displayFatwas();
+
+}
+
+
+/* =========================================
+   DISPLAY FATWAS
+========================================= */
+
+function displayFatwas() {
+
+    displayCategories();
+
+
+    const search =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase();
+
+
+    const filtered =
+    fatwas.filter(
+
+        fatwa => {
+
+            const categoryMatch =
+            selectedCategory ===
+            "அனைத்தும்"
+            ||
+            fatwa.category ===
+            selectedCategory;
+
+
+            const searchText =
+            (
+                fatwa.question
+                +
+                fatwa.answer
+                +
+                fatwa.category
+            )
+            .toLowerCase();
+
+
+            return (
+                categoryMatch
+                &&
+                searchText.includes(search)
+            );
+
+        }
+
+    );
+
+
+    const grid =
+    document.getElementById(
+        "fatwaGrid"
+    );
+
+
+    if (!filtered.length) {
+
+        grid.innerHTML =
+        `
+        <div style="
+        grid-column:1/-1;
+        background:white;
+        padding:40px;
+        text-align:center;
+        border-radius:15px;
+        ">
+
+        🔎 ஃபத்வா கிடைக்கவில்லை.
+
+        </div>
+        `;
+
+        return;
+    }
+
+
+    grid.innerHTML =
+    filtered.map(
+
+        fatwa => {
+
+            const liked =
+            isLiked(fatwa.id);
+
+
+            return `
+
+            <article class="fatwa-card">
+
+            <div class="fatwa-content">
+
+            <span class="tag">
+
+            ${escapeHTML(
+                fatwa.category
+            )}
+
+            </span>
+
+
+            <h3>
+
+            ${escapeHTML(
+                fatwa.question
+            )}
+
+            </h3>
+
+
+            <p>
+
+            ${escapeHTML(
+                fatwa.answer.substring(
+                    0,
+                    160
+                )
+            )}
+
+            ${fatwa.answer.length > 160
+                ? "..."
+                : ""}
+
+            </p>
+
+
+            <div class="meta">
+
+            ${fatwa.date}
+
+            • ❤️
+
+            ${fatwa.likes || 0}
+
+            likes
+
+            </div>
+
+
+            <div class="actions">
+
+
+            <button
+            class="
+            like-button
+            ${liked ? "liked" : ""}
+            "
+            onclick="
+            toggleLike('${fatwa.id}')
+            ">
+
+            ${liked ? "❤️" : "♡"}
+
+            ${fatwa.likes || 0}
+
+            </button>
+
+
+            <button
+            class="read-button"
+            onclick="
+            showFatwa('${fatwa.id}')
+            ">
+
+            வாசிக்க →
+
+            </button>
+
+
+            </div>
+
+            </div>
+
+            </article>
+
+            `;
+
+        }
+
+    ).join("");
+
+}
+
+
+/* =========================================
+   SHOW FATWA
+========================================= */
+
+function showFatwa(id) {
+
+    const fatwa =
+    fatwas.find(
+        item => item.id === id
+    );
+
+
+    if (!fatwa) return;
+
+
+    document.getElementById(
+        "detailContent"
+    ).innerHTML =
+
+    `
+
+    <span class="tag">
+
+    ${escapeHTML(
+        fatwa.category
+    )}
+
+    </span>
+
+
+    <h2 style="
+    margin:15px 0;
+    line-height:1.6;
+    ">
+
+    ${escapeHTML(
+        fatwa.question
+    )}
+
+    </h2>
+
+
+    <div class="detail-answer">
+
+    ${escapeHTML(
+        fatwa.answer
+    )}
+
+    </div>
+
+
+    <div class="source-box">
+
+    <strong>
+    📜 மூல ஆதாரம்
+    </strong>
+
+    <br>
+
+    ${escapeHTML(
+        fatwa.source ||
+        "மூலம் குறிப்பிடப்படவில்லை"
+    )}
+
+
+    ${
+        fatwa.arabic
+        ?
+
+        `
+        <div
+        dir="rtl"
+        style="
+        font-size:24px;
+        margin-top:15px;
+        ">
+
+        ${escapeHTML(
+            fatwa.arabic
+        )}
+
+        </div>
+        `
+
+        :
+
+        ""
+    }
+
+
+    ${
+        fatwa.sourceLink
+        ?
+
+        `
+        <br>
+
+        <a
+        href="${safeURL(fatwa.sourceLink)}"
+        target="_blank"
+        style="
+        color:#0b6b3a;
+        font-weight:bold;
+        ">
+
+        🔗 மூல இணைப்பை திறக்க
+
+        </a>
+        `
+
+        :
+
+        ""
+    }
+
+    </div>
+
+
+    <div class="actions">
+
+    <button
+    class="like-button"
+    onclick="
+    toggleLike('${fatwa.id}');
+    showFatwa('${fatwa.id}');
+    ">
+
+    ❤️ ${fatwa.likes || 0}
+
+    </button>
+
+
+    <button
+    class="read-button"
+    onclick="
+    shareFatwa('${fatwa.id}')
+    ">
+
+    ↗ பகிர்
+
+    </button>
+
+    </div>
+
+    `;
+
+
+    openModal(
+        "detailModal"
+    );
+
+}
+
+
+/* =========================================
+   LIKE SYSTEM
+========================================= */
+
+function isLiked(id) {
+
+    const likes =
+    JSON.parse(
+        localStorage.getItem(
+            "tamilLiked"
+        )
+        ||
+        "[]"
+    );
+
+
+    return likes.includes(id);
+
+}
+
+
+function toggleLike(id) {
+
+    const fatwa =
+    fatwas.find(
+        item => item.id === id
+    );
+
+
+    if (!fatwa) return;
+
+
+    let likes =
+    JSON.parse(
+        localStorage.getItem(
+            "tamilLiked"
+        )
+        ||
+        "[]"
+    );
+
+
+    if (
+        likes.includes(id)
+    ) {
+
+        likes =
+        likes.filter(
+            item => item !== id
+        );
+
+
+        fatwa.likes =
+        Math.max(
+            0,
+            (fatwa.likes || 0) - 1
+        );
+
+    }
+
+    else {
+
+        likes.push(id);
+
+        fatwa.likes =
+        (fatwa.likes || 0) + 1;
+
+    }
+
+
+    localStorage.setItem(
+        "tamilLiked",
+        JSON.stringify(likes)
+    );
+
+
+    saveDatabase();
+
+    displayFatwas();
+
+}
+
+
+/* =========================================
+   SHARE
+========================================= */
+
+function shareFatwa(id) {
+
+    const fatwa =
+    fatwas.find(
+        item => item.id === id
+    );
+
+
+    if (!fatwa) return;
+
+
+    if (
+        navigator.share
+    ) {
+
+        navigator.share({
+
+            title:
+            fatwa.question,
+
+            text:
+            fatwa.question,
+
+            url:
+            window.location.href
+
+        });
+
+    }
+
+    else {
+
+        navigator.clipboard.writeText(
+            window.location.href
+        );
+
+        alert(
+            "இணைப்பு copy செய்யப்பட்டது."
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   ADMIN FIVE TAP
+========================================= */
+
+document
+.getElementById("adminLogo")
+.addEventListener(
+    "click",
+    adminTap
+);
+
+
+function adminTap() {
+
+    tapCount++;
+
+
+    clearTimeout(
+        tapTimer
+    );
+
+
+    tapTimer =
+    setTimeout(
+        () => {
+            tapCount = 0;
+        },
+        2500
+    );
+
+
+    if (
+        tapCount >= 5
+    ) {
+
+        tapCount = 0;
+
+
+        if (isAdmin) {
+
+            openAddFatwa();
+
+        }
+
+        else {
+
+            openModal(
+                "adminLoginModal"
+            );
+
+        }
+
+    }
+
+}
+
+
+/* =========================================
+   ADMIN LOGIN
+========================================= */
+
+function adminLogin() {
+
+    const email =
+    document
+    .getElementById(
+        "adminEmail"
+    )
+    .value
+    .trim();
+
+
+    const password =
+    document
+    .getElementById(
+        "adminPassword"
+    )
+    .value;
+
+
+    const message =
+    document
+    .getElementById(
+        "adminMessage"
+    );
+
+
+    /*
+       DEMO ONLY
+
+       CHANGE THIS BEFORE
+       USING A REAL WEBSITE.
+    */
+
+    if (
+        email ===
+        "admin@tamilfatwa.local"
+        &&
+        password ===
+        "Admin@123"
+    ) {
+
+        isAdmin = true;
+
+
+        sessionStorage.setItem(
+            "tamilAdmin",
+            "true"
+        );
+
+
+        closeModal(
+            "adminLoginModal"
+        );
+
+
+        document
+        .getElementById(
+            "adminBar"
+        )
+        .classList
+        .add("show");
+
+    }
+
+    else {
+
+        message.innerHTML =
+        `
+        <div class="error">
+
+        Admin Email அல்லது Password
+        தவறாக உள்ளது.
+
+        </div>
+        `;
+
+    }
+
+}
+
+
+/* =========================================
+   ADMIN LOGOUT
+========================================= */
+
+function adminLogout() {
+
+    isAdmin = false;
+
+
+    sessionStorage.removeItem(
+        "tamilAdmin"
+    );
+
+
+    document
+    .getElementById(
+        "adminBar"
+    )
+    .classList
+    .remove("show");
+
+}
+
+
+/* =========================================
+   ADD FATWA
+========================================= */
+
+function openAddFatwa() {
+
+    if (!isAdmin) {
+
+        openModal(
+            "adminLoginModal"
+        );
+
+        return;
+    }
+
+
+    document.getElementById(
+        "editId"
+    ).value = "";
+
+
+    document.getElementById(
+        "fatwaQuestion"
+    ).value = "";
+
+
+    document.getElementById(
+        "fatwaAnswer"
+    ).value = "";
+
+
+    document.getElementById(
+        "fatwaArabic"
+    ).value = "";
+
+
+    document.getElementById(
+        "fatwaSource"
+    ).value = "";
+
+
+    document.getElementById(
+        "fatwaMessage"
+    ).innerHTML = "";
+
+
+    openModal(
+        "fatwaModal"
+    );
+
+}
+
+
+/* =========================================
+   SAVE FATWA
+========================================= */
+
+function saveFatwa() {
+
+    if (!isAdmin) return;
+
+
+    const question =
+    document.getElementById(
+        "fatwaQuestion"
+    ).value.trim();
+
+
+    const answer =
+    document.getElementById(
+        "fatwaAnswer"
+    ).value.trim();
+
+
+    const category =
+    document.getElementById(
+        "fatwaCategory"
+    ).value;
+
+
+    const arabic =
+    document.getElementById(
+        "fatwaArabic"
+    ).value.trim();
+
+
+    const source =
+    document.getElementById(
+        "fatwaSource"
+    ).value.trim();
+
+
+    const message =
+    document.getElementById(
+        "fatwaMessage"
+    );
+
+
+    if (
+        !question ||
+        !answer
+    ) {
+
+        message.innerHTML =
+        `
+        <div class="error">
+
+        கேள்வி மற்றும் பதில்
+        கட்டாயம்.
+
+        </div>
+        `;
+
+        return;
+    }
+
+
+    const newFatwa = {
+
+        id:
+        Date.now().toString(),
+
+        category:
+        category,
+
+        question:
+        question,
+
+        answer:
+        answer,
+
+        arabic:
+        arabic,
+
+        source:
+        "Admin source",
+
+        sourceLink:
+        source,
+
+        date:
+        new Date()
+        .toISOString()
+        .split("T")[0],
+
+        likes:
+        0
+
+    };
+
+
+    fatwas.unshift(
+        newFatwa
+    );
+
+
+    saveDatabase();
+
+
+    displayFatwas();
+
+
+    message.innerHTML =
+    `
+    <div class="success">
+
+    ஃபத்வா வெற்றிகரமாக
+    சேர்க்கப்பட்டது.
+
+    </div>
+    `;
+
+
+    setTimeout(
+        () =>
+        closeModal(
+            "fatwaModal"
+        ),
+        700
+    );
+
+}
+
+
+/* =========================================
+   SECURITY HELPERS
+========================================= */
+
+function escapeHTML(text) {
+
+    return String(text || "")
+    .replace(
+        /[&<>"']/g,
+
+        character => ({
+
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+
+        }[character])
+
+    );
+
+}
+
+
+function safeURL(url) {
+
+    try {
+
+        const parsed =
+        new URL(url);
+
+
+        if (
+            parsed.protocol ===
+            "http:"
+            ||
+            parsed.protocol ===
+            "https:"
+        ) {
+
+            return parsed.href;
+
+        }
+
+        return "#";
+
+    }
+
+    catch {
+
+        return "#";
+
+    }
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+document.getElementById(
+    "year"
+).textContent =
+new Date().getFullYear();
+
+
+if (isAdmin) {
+
+    document
+    .getElementById(
+        "adminBar"
+    )
+    .classList
+    .add("show");
+
+}
+
+
+updateUserUI();
+
+displayFatwas();
+
+</script>
+
+
+</body>
+</html>
